@@ -1,0 +1,154 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 89vh;
+}
+.chatbot-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: aliceblue;
+  width: 40%;
+  height: 500px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.chatbot-header {
+  display: flex;
+}
+.chatbot-content {
+  height: 300px;
+  background-color: white;
+  overflow: auto;
+}
+.fa-robot {
+  font-size: 3rem;
+  background-color: white;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 100%;
+}
+.name {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.status {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.chatbox {
+  width: 80%;
+  border: none;
+  outline: none;
+  padding: 10px 25px;
+  border-radius: 25px 0 0 25px;
+  color: black;
+}
+.sendBtn {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  width: 20%;
+  padding: 10px 25px;
+  border-radius: 0 25px 25px 0;
+  font-weight: 500;
+  cursor: pointer;
+}
+.bot-message {
+}
+.human-message {
+}
+
+/* ---- Chat Message Style ----*/
+.chat {
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 16px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px 20px 10px;
+  margin: auto;
+}
+
+.msg {
+  position: relative;
+  max-width: 75%;
+  padding: 7px 15px;
+  margin-bottom: 10px;
+}
+
+.msg.sent {
+  border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+  background: #42a5f5;
+  color: #fff;
+  /* moves it to the right */
+  margin-left: auto;
+}
+
+.msg.rcvd {
+  border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+  background: #f1f1f1;
+  color: #555;
+  /* moves it to the left */
+  margin-right: auto;
+}
+
+/* Improve radius for messages group */
+
+.msg.sent:first-child,
+.msg.rcvd + .msg.sent {
+  border-top-right-radius: var(--rad);
+}
+
+.msg.rcvd:first-child,
+.msg.sent + .msg.rcvd {
+  border-top-left-radius: var(--rad);
+}
+
+/* time */
+
+.msg::before {
+  content: attr(data-time);
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 100%;
+  color: #888;
+  white-space: nowrap;
+  display: none;
+}
+
+.msg.sent::before {
+  right: 15px;
+}
+
+.msg.rcvd::before {
+  left: 15px;
+}
+
+/* Show time only for first message in group */
+.msg:first-child::before,
+.msg.sent + .msg.rcvd::before,
+.msg.rcvd + .msg.sent::before {
+  /* Show only for first message in group */
+  display: block;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

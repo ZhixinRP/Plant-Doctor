@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { FaSeedling, FaBars, FaTimes } from "react-icons/fa";
-import "./NavBar.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaSeedling, FaBars, FaTimes } from 'react-icons/fa';
+import './NavBar.css';
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  // const handleClick = () => setClick(!click);
   return (
     <>
       <div className="navbar">
@@ -21,7 +21,7 @@ const NavBar = () => {
               <FaBars className="fa-bars" />
             )}
           </div>
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
               <Link to="/chatbot" className="nav-links">
                 Chabot

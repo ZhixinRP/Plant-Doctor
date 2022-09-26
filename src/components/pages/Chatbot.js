@@ -1,27 +1,35 @@
-import React, { useState } from "react";
-import Axios from "axios";
-import "./Chatbot.css";
-import { FaRobot } from "react-icons/fa";
+import React, { useState } from 'react';
+import Axios from 'axios';
+import './Chatbot.css';
+import { FaRobot } from 'react-icons/fa';
+import { useEffect } from 'react';
+
+const url = 'http://49.245.27.185:8888/chatbot/';
 
 const Chatbot = () => {
-  const [message, setMessage] = useState({ type: "", time: "", text: "" });
+  const [message, setMessage] = useState({ type: '', time: '', text: '' });
   const [messages, setMessages] = useState([]); // Store all the messages
 
   const getTime = () => {
     const d = new Date();
-    let time = d.getHours() + ":" + d.getMinutes();
+    let time = d.getHours() + ':' + d.getMinutes();
     return time;
   };
 
-  const getResponse = (message) => {
-    console.log(message.text);
-    if (message.text === "Hi") {
+  const getResponse = async (message) => {
+    // console.log(message.text);
+    try {
+      const response = await Axios.get(url + message.text);
+      console.log(response);
+      console.log(message.text);
       setMessages((messages) => [
         ...messages,
-        { type: "msg rcvd", text: "Nice To Meet You!" },
+        {
+          type: 'msg rcvd',
+          text: response.data[0].response,
+        },
       ]);
-    }
-    // Axios.get("");
+    } catch (error) {}
   };
 
   const sendMessage = async (e) => {
@@ -30,8 +38,17 @@ const Chatbot = () => {
       setMessages((messages) => [...messages, message]);
       getResponse(message);
     }
-    setMessage({ type: "", text: "" });
+    setMessage({ type: '', text: '' });
   };
+
+  useEffect(() => {
+    async function fetchData() {
+      await Axios.get('http://49.245.27.185:8888/sensor/').then((response) => {
+        console.log(response);
+      });
+    }
+    fetchData();
+  }, []);
   return (
     <>
       <div className="wrapper">
@@ -44,11 +61,11 @@ const Chatbot = () => {
             </div>
           </div>
           <div className="chatbot-content">
-            <div class="chat">
+            <div className="chat">
               {messages.length === 0
-                ? ""
-                : messages.map((msg) => (
-                    <div data-time={msg.time} className={msg.type}>
+                ? ''
+                : messages.map((msg, id) => (
+                    <div key={id} data-time={msg.time} className={msg.type}>
                       {msg.text}
                     </div>
                   ))}
@@ -61,7 +78,7 @@ const Chatbot = () => {
                 className="chatbox"
                 onChange={(e) =>
                   setMessage({
-                    type: "msg sent",
+                    type: 'msg sent',
                     time: getTime(),
                     text: e.target.value,
                   })

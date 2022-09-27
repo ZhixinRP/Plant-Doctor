@@ -1,9 +1,10 @@
 import React from "react";
+import PlantDoctor from "../PlantDoctor";
 
 const Home = () => {
   return (
     <>
-      <h1>This is the Home page</h1>
+      <PlantDoctor />
     </>
   );
 };

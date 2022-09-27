@@ -28,8 +28,8 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/store" className="nav-links">
-                Store
+              <Link to="/sensor" className="nav-links">
+                Sensor
               </Link>
             </li>
           </ul>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import Axios from 'axios';
 import './Chatbot.css';
 import { FaRobot } from 'react-icons/fa';
-import { useEffect } from 'react';
 
 const url = 'http://49.245.27.185:8888/chatbot/';
 
@@ -17,7 +16,6 @@ const Chatbot = () => {
   };
 
   const getResponse = async (message) => {
-    // console.log(message.text);
     try {
       const response = await Axios.get(url + message.text);
       console.log(response);

@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: aliceblue;
+  background: #CBC3E3;
   width: 40%;
   height: 500px;
   padding: 20px;
@@ -25,7 +25,8 @@
 }
 .fa-robot {
   font-size: 3rem;
-  background-color: white;
+  color: white;
+  background-color: black;
   padding: 10px;
   margin-right: 20px;
   border-radius: 100%;

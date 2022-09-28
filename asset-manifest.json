@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Plant-Doctor/static/css/main.92ce8d6a.css",
+    "main.js": "/Plant-Doctor/static/js/main.bcbf4f15.js",
+    "index.html": "/Plant-Doctor/index.html",
+    "main.92ce8d6a.css.map": "/Plant-Doctor/static/css/main.92ce8d6a.css.map",
+    "main.bcbf4f15.js.map": "/Plant-Doctor/static/js/main.bcbf4f15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92ce8d6a.css",
+    "static/js/main.bcbf4f15.js"
+  ]
+}

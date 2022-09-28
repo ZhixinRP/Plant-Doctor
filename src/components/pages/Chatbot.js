@@ -18,8 +18,8 @@ const Chatbot = () => {
   const getResponse = async (message) => {
     try {
       const response = await Axios.get(url + message.text);
-      console.log(response);
-      console.log(message.text);
+      // console.log(response);
+      // console.log(message.text);
       setMessages((messages) => [
         ...messages,
         {

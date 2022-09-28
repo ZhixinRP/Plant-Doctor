@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.uploadForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 200px;
+}
+.input-file {
+    border: 1px orange solid;
+    padding: 20px;
+    border-radius: 25px;
+}
+.upload-label {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.btn-upload {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.status {
+    font-size: 2rem;
+    margin-top: 20px;
+}

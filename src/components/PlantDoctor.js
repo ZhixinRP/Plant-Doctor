@@ -22,7 +22,7 @@ const PlantDoctor = () => {
             console.log(response)
             let label = response.data.label
             let accuracy = response.data.accuracy
-            setMessage(label + " " + accuracy + "%");
+            setMessage(label);
         } catch (error) {
             console.log(error)
         }
@@ -39,12 +39,12 @@ const PlantDoctor = () => {
                     <div className="image">
                         <img src="" alt="" />
                     </div>
-                    <form>
-                        <label>Select File</label>
-                        <input type="file" onChange={handleChange} />
-                        <button onClick={handleApi}>Upload</button>
+                    <form className='uploadForm'>
+                        <label className='upload-label'>Select File</label>
+                        <input className='input-file' type="file" onChange={handleChange} />
+                        <button className='btn-upload' onClick={handleApi}>Upload</button>
                     </form>
-                    <h1>{message}</h1>
+                    <div className='status'>Plant Health Status: {message}</div>
                 </div>
             </div>
         </>

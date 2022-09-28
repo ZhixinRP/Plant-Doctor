@@ -24,7 +24,7 @@ const NavBar = () => {
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
               <Link to="/chatbot" className="nav-links">
-                Chabot
+                Chatbot
               </Link>
             </li>
             <li className="nav-item">

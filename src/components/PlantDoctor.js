@@ -44,7 +44,7 @@ const PlantDoctor = () => {
                         <input className='input-file' type="file" onChange={handleChange} />
                         <button className='btn-upload' onClick={handleApi}>Upload</button>
                     </form>
-                    <div className='status'>Plant Health Status: {message}</div>
+                    <div className='plant-status'>Plant Health Status: {message}</div>
                 </div>
             </div>
         </>

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Plant-Doctor/static/css/main.84a0321e.css",
-    "main.js": "/Plant-Doctor/static/js/main.f5633071.js",
+    "main.css": "/Plant-Doctor/static/css/main.0156ec6c.css",
+    "main.js": "/Plant-Doctor/static/js/main.b49e48bc.js",
     "index.html": "/Plant-Doctor/index.html",
-    "main.84a0321e.css.map": "/Plant-Doctor/static/css/main.84a0321e.css.map",
-    "main.f5633071.js.map": "/Plant-Doctor/static/js/main.f5633071.js.map"
+    "main.0156ec6c.css.map": "/Plant-Doctor/static/css/main.0156ec6c.css.map",
+    "main.b49e48bc.js.map": "/Plant-Doctor/static/js/main.b49e48bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.84a0321e.css",
-    "static/js/main.f5633071.js"
+    "static/css/main.0156ec6c.css",
+    "static/js/main.b49e48bc.js"
   ]
 }

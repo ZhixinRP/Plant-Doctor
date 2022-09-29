@@ -8,11 +8,14 @@ const NavBar = () => {
   const handleClick = () => {
     setClick(!click);
   }
+  const closeNav = () => {
+    setClick(false);
+  }
   return (
     <>
       <div className="navbar">
         <div className="navbar-container">
-          <Link to="/" className="navbar-logo">
+          <Link to="/" className="navbar-logo" onClick={closeNav}>
             <span className="logo-name">Plant Doctor</span>
             <FaSeedling />
           </Link>
@@ -25,12 +28,12 @@ const NavBar = () => {
           </div>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className="nav-item">
-              <Link to="/chatbot" className="nav-links">
+              <Link to="/chatbot" className="nav-links" onClick={handleClick}>
                 Chatbot
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/sensor" className="nav-links">
+              <Link to="/sensor" className="nav-links" onClick={handleClick}>
                 Sensor
               </Link>
             </li>

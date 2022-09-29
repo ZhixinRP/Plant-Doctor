@@ -5,7 +5,9 @@ import './NavBar.css';
 
 const NavBar = () => {
   const [click, setClick] = useState(false);
-  // const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    setClick(!click);
+  }
   return (
     <>
       <div className="navbar">
@@ -14,7 +16,7 @@ const NavBar = () => {
             <span className="logo-name">Plant Doctor</span>
             <FaSeedling />
           </Link>
-          <div className="menu-icon">
+          <div className="menu-icon" onClick={handleClick}>
             {click ? (
               <FaTimes className="fa-times" />
             ) : (
